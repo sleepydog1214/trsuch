@@ -1,0 +1,15 @@
+doctype html
+html(lang="en" ng-app="sourceApp")
+  head
+    title Thomas Suchyta
+    meta(charset='utf-8')
+    script(src='../angular/angular.js')
+    script(src='../angular-route/angular-route.js')
+    script(src='../app.module.js')
+    script(src='../app.config.js')
+    script(src='../source-list/source-list.module.js')
+    script(src='../source-list/source-list.component.js')
+    script(src='../source-code/source-code.module.js')
+    script(src='../source-code/source-code.component.js')
+  body
+    div(ng-view)

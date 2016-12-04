@@ -5,6 +5,7 @@ var express        = require('express'),
     bodyParser     = require('body-parser'),
     path           = require('path'),
     routes         = require('../../modules/core/server/routes/index'),
+    code           = require('../../modules/core/server/routes/code'),
     methodOverride = require('method-override');
 
 module.exports.init = function (db) {
@@ -28,8 +29,10 @@ module.exports.init = function (db) {
 
   app.use(express.static(path.join(__dirname, '../../public')));
   app.use(express.static(path.join(__dirname, '../../node_modules')));
+  app.use(express.static(path.join(__dirname, '../../modules/core/client/app')))
 
   app.use('/', routes);
+  app.use('/code', code);
 
   return app;
 }

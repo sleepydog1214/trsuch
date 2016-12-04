@@ -1,0 +1,13 @@
+<p>Search: <input ng-model="$ctrl.query" /></p>
+<p>Sort by:
+  <select ng-model="$ctrl.orderProp">
+    <option value="name">Name</option>
+    <option value="location">Location</option>
+  </select>
+</p>
+<ul>
+  <li ng-repeat="source in $ctrl.sources | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+    <span><a href="#!/source/{{source._id}}">{{source.name}}</a></span>
+    <p>{{source.location}}</p>
+  </li>
+</ul>
