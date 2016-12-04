@@ -1,0 +1,10 @@
+Create a database called code.
+Create a collection called algorithms.
+Create a collection called data structures.
+Data in the collections:
+  name: "bubble sort",
+  type: "sort",
+  location: "app/code/algorithms/bubble-sort.js",
+  description: "A bubble sort implementation"
+
+Need the router to connect to the db and read from the collection

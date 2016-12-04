@@ -1,0 +1,24 @@
+{
+  "name": "trsuch",
+  "version": "1.0.0",
+  "description": "Code and Bio of Thomas Suchyta",
+  "main": "server.js",
+  "keywords": [
+    "algorithms",
+    "data structures"
+  ],
+  "author": "Thomas Suchyta",
+  "license": "ISC",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "angular": "~1.5.9",
+    "body-parser": "~1.15.2",
+    "express": "~4.14.0",
+    "method-override": "~2.3.7",
+    "mongoose": "~4.7.1",
+    "morgan": "~1.7.0",
+    "pug": "^2.0.0-beta6"
+  }
+}
