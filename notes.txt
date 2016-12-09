@@ -1,10 +1,21 @@
-Create a database called code.
-Create a collection called algorithms.
-Create a collection called data structures.
-Data in the collections:
+X Create a database called code.
+X Create a collection called algorithms.
+X Create a collection called data structures.
+X Data in the collections:
   name: "bubble sort",
   type: "sort",
   location: "app/code/algorithms/bubble-sort.js",
   description: "A bubble sort implementation"
 
-Need the router to connect to the db and read from the collection
+X Need the router to connect to the db and read from the collection
+
+X Need to grab the algorithm source code and send it as json data
+back to the template. In the express router:
+  1. find by id
+  2. get source file location and open it and read it
+  3. build a new json structure
+  4. send it back to the client
+
+Document the code
+Upload to Heroku
+Add css

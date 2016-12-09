@@ -1,2 +1,0 @@
-// stub
-'use strict';
