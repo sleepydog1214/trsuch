@@ -1,4 +1,4 @@
-/*********************************************************************
+<!-- *****************************************************************
  The MIT License (MIT)
 
  Copyright (c) 2016 Thomas Suchyta
@@ -20,18 +20,21 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-*********************************************************************/
-
-/*********************************************************************
- * ./server.js
- *
- * Create and start the node.js server
-*********************************************************************/
-'use strict';
-
-/*********************************************************************
- * Main code - Server configuration code is in ./config/lib, 
- *             including express and mongoose initialization.
-*********************************************************************/
-var app = require('./config/lib/app');
-var server = app.start();
+****************************************************************** -->
+<p>Search: <input ng-model="$ctrl.query" /></p>
+<p>Sort by:
+  <select ng-model="$ctrl.orderProp">
+    <option value="name">Name</option>
+    <option value="location">Location</option>
+  </select>
+</p>
+<ul>
+<!-- *****************************************************************
+ * Loop through source program that is retrieved by the sourceList
+ * controller.
+****************************************************************** -->
+  <li ng-repeat="source in $ctrl.sources | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+    <span><a href="#!/sources/{{source._id}}">{{source.name}}</a></span>
+    <p>{{source.location}}</p>
+  </li>
+</ul>

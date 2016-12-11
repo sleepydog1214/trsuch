@@ -23,15 +23,24 @@
 *********************************************************************/
 
 /*********************************************************************
- * ./server.js
+ * modules/client/app/core/sources.services.js
  *
- * Create and start the node.js server
+ * angular.module.factory() - Define the 'Sources' service and factory
+ *                            resource function
 *********************************************************************/
 'use strict';
 
-/*********************************************************************
- * Main code - Server configuration code is in ./config/lib, 
- *             including express and mongoose initialization.
-*********************************************************************/
-var app = require('./config/lib/app');
-var server = app.start();
+angular.
+  module('core.sources').
+    factory('Sources', ['$resource',
+      function($resource) {
+        return $resource('sources/', {}, {
+          query: {
+            method: 'GET',
+            //The sourceID gets an individual source program
+            params: {sourceId: 'sources'},
+            isArray: true
+          }
+        });
+      }
+    ]);

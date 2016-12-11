@@ -21,17 +21,37 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
 *********************************************************************/
-
 /*********************************************************************
- * ./server.js
+ * modules/client/app/app.config.js
  *
- * Create and start the node.js server
+ * Main 'sourceApp' module configuration
+ *
+ * angular.module.config() - Configure the templates for the source
+ *                           program routes
 *********************************************************************/
 'use strict';
 
 /*********************************************************************
- * Main code - Server configuration code is in ./config/lib, 
- *             including express and mongoose initialization.
+ * angular.module.config() - Configure the $locationProvider,
+ *                           $routeProvider, and $resourceProvider
+ *                           for the 'sourceApp' module.
 *********************************************************************/
-var app = require('./config/lib/app');
-var server = app.start();
+angular.
+  module('sourceApp').
+    config(['$locationProvider', '$routeProvider', '$resourceProvider',
+      function config($locationProvider, $routeProvider, $resourceProvider) {
+        $locationProvider.hashPrefix('!');
+        $resourceProvider.defaults.stripTrailingSlashes = false;
+
+        $routeProvider.
+          //Template for the list of programs
+          when('/source', {
+            template: '<source-list></source-list>'
+          }).
+          //Template for an individual program
+          when('/sources/:sourceId', {
+            template: '<source-code></source-code>'
+          }).
+          otherwise('/source');
+      }
+  ]);

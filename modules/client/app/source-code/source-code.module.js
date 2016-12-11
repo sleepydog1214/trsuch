@@ -23,15 +23,14 @@
 *********************************************************************/
 
 /*********************************************************************
- * ./server.js
+ * modules/client/app/source-code/source-code.module.js
  *
- * Create and start the node.js server
+ * angular.module() - Define the 'sourceCode' module and register its
+ *                    dependencies
 *********************************************************************/
 'use strict';
 
-/*********************************************************************
- * Main code - Server configuration code is in ./config/lib, 
- *             including express and mongoose initialization.
-*********************************************************************/
-var app = require('./config/lib/app');
-var server = app.start();
+angular.module('sourceCode', [
+  'ngRoute',
+  'core.sources'
+]);

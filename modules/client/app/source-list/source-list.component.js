@@ -23,15 +23,23 @@
 *********************************************************************/
 
 /*********************************************************************
- * ./server.js
+ * modules/client/app/source-list/source-list.component.js
  *
- * Create and start the node.js server
+ * angular.module.component() - Define the 'sourceList' module
+ *                              component and its controller
 *********************************************************************/
 'use strict';
 
-/*********************************************************************
- * Main code - Server configuration code is in ./config/lib, 
- *             including express and mongoose initialization.
-*********************************************************************/
-var app = require('./config/lib/app');
-var server = app.start();
+angular.
+  module('sourceList').
+    component('sourceList', {
+      templateUrl: '../source-list/source-list.template.html',
+      controller: ['Sources',
+        //SourceListController() - Use Sources service to query server
+        //                         for list of source programs
+        function SourceListController(Sources) {
+          this.sources = Sources.query();
+          this.orderProp = 'name';
+        }
+      ]
+    });

@@ -1,9 +1,0 @@
-<p>Algorithm Name: <span>{{$ctrl.data.name}}</span></p>
-<p>Algorithm Type: <span>{{$ctrl.data.type}}</span></p>
-<p>Algorithm Description: <span>{{$ctrl.data.description}}</span></p>
-<h3>Code</h3>
-<p>{{$ctrl.data.location}}</p>
-<script src="{{$ctrl.data.location}}"></script>
-<h4 ng-click="$ctrl.runCode($ctrl.data.location)">Click here to execute algorithm</h4>
-<p><span>{{$ctrl.codeResults}}</span></p>
-<pre>{{$ctrl.data.code}}</pre>

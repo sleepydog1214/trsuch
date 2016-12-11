@@ -23,15 +23,30 @@
 *********************************************************************/
 
 /*********************************************************************
- * ./server.js
+ * modules/server/routes/index.js
  *
- * Create and start the node.js server
+ * Functions controlling routes for the index html code
+ *
+ * GET / - Render home page
+ * GET index - Render home page
 *********************************************************************/
 'use strict';
 
+var express = require('express');
+var router  = express.Router();
+
 /*********************************************************************
- * Main code - Server configuration code is in ./config/lib, 
- *             including express and mongoose initialization.
+ * GET / - Render home page
 *********************************************************************/
-var app = require('./config/lib/app');
-var server = app.start();
+router.get('/', function(req, res, next) {
+  res.render('index', {});
+});
+
+/*********************************************************************
+ * GET index - Render home page
+*********************************************************************/
+router.get('/index*', function(req, res, next) {
+  res.render('index', {});
+});
+
+module.exports = router;
