@@ -22,10 +22,56 @@
  SOFTWARE.
 ****************************************************************** -->
 <ul>
-  <li><a href="../index">Home</a></li>
+  <li><a href="../">Home</a></li>
   <li><a href="../code/source#!/source">Code Source List</a></li>
 </ul>
 <h1>{{$ctrl.cv[0].name}}</h1>
 <h2>{{$ctrl.cv[0].title}}</h2>
 <h3>Summary</h3>
 <p>{{$ctrl.cv[0].summary}}</p>
+<h3>Experience</h3>
+<ul>
+  <li ng-repeat="skill in $ctrl.cv[0].experience">
+    <p>{{skill.paragraph}}</p>
+    <ul>
+      <li ng-repeat="subp in skill.subParagraph">
+        <p>{{subp.bullet}}</p>
+    </ul>
+  </li>
+</ul>
+<h3>Technical Skills</h3>
+<ul>
+  <li>Languages/Programming</li>
+    <ul>
+      <li ng-repeat="lang in $ctrl.cv[0].technicalSkills.languages">
+        <p>{{lang}}</p>
+      </li>
+    </ul>
+  <li>Software</li>
+    <ul>
+      <li ng-repeat="softw in $ctrl.cv[0].technicalSkills.software">
+        <p>{{softw}}</p>
+      </li>
+    </ul>
+  <li>Standards</li>
+    <ul>
+      <li ng-repeat="standard in $ctrl.cv[0].technicalSkills.standards">
+        <p>{{standard}}</p>
+      </li>
+    </ul>
+</ul>
+<h3>Key Skills</h3>
+<ul>
+  <li ng-repeat="skill in $ctrl.cv[0].keySkills">
+    <p>{{skill}}</p>
+  </li>
+</ul>
+<h3>Education</h3>
+<ul>
+  <li>{{$ctrl.cv[0].educationLocation}}</li>
+  <ul>
+    <li ng-repeat="degree in $ctrl.cv[0].degrees">
+      <p>{{degree}}</p>
+    </li>
+  </ul>
+</ul>

@@ -35,7 +35,7 @@ angular.
     component('cv', {
       templateUrl: '../cv/cv.template.html',
       controller: ['CV',
-        function IndexController(CV) {
+        function CVController(CV) {
           var self = this;
 
           self.cv = CV.query();

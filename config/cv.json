@@ -8,7 +8,11 @@
   "experience": [
     {
       "paragraph": "Developed C/C++ compiler software for TI DSPs and Microcontrollers. Led project teams through the complete software lifecycle of compiler releases, from customer engagement, requirement gathering, design plans, schedules, documentation, testing, build and release. Maintained customer satisfaction with the software through leading customer conference calls and on-site support.",
-      "subParagraph": "Implemented C++ code features to the compiler ranging from register allocation improvements, peephole optimizations, parser, assembly and linker improvements."
+      "subParagraph": [
+        {
+          "bullet": "Implemented C++ code features to the compiler ranging from register allocation improvements, peephole optimizations, parser, assembly and linker improvements."
+        }
+      ]
     },
     {
       "paragraph": "Created the compiler QA team and managed up to six direct reports. Ensured the quality of the software was maintained and improved through creating test and build automation, software defect web apps, and software requirements and scheduling web sites.",
@@ -23,11 +27,19 @@
     },
     {
       "paragraph": "Designed the TI safety qualification testing tool and led the team in the development of software that allows customers to ensure the compilers meet the requirements of the ISO 26262 and IEC 61508 safety standards.",
-      "subParagraph": "Written in Perl to automatically run 100,000+ separate C/C++ language test cases on TI hardware emulators, connected to Linux or Windows, and collecting and summarizing results and generating safety qualification reports."
+      "subParagraph": [
+        {
+          "bullet": "Written in Perl to automatically run 100,000+ separate C/C++ language test cases on TI hardware emulators, connected to Linux or Windows, and collecting and summarizing results and generating safety qualification reports."
+        }
+      ]
     },
     {
       "paragraph": "Led the compiler and emulation groups in managing their development processes to ensure their documentation met the qualifications of internal and external ISO 9001 audits.",
-      "subParagraph": "Project page is available at http://www.ti.com/tool/safeti_cqkit"
+      "subParagraph": [
+        {
+          "bullet": "Project page is available at http://www.ti.com/tool/safeti_cqkit"
+        }
+      ]
     }
   ],
   "keySkills": ["Project Management", "Team Management", "QA Management",
@@ -39,6 +51,6 @@
                   "IEC 61508 software tool qualification"]
   },
   "educationLocation": "Michigan Technological University, Houghton, MI",
-  "education": ["M.S., Computer Science 1998",
-                "B.S., Computer Science 1997, summa cum laude"]
+  "degrees": [ "M.S., Computer Science 1998",
+               "B.S., Computer Science 1997 - summa cum laude" ]
 }
