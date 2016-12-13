@@ -23,29 +23,11 @@
 *********************************************************************/
 
 /*********************************************************************
- * config/lib/mongoose.js
+ * modules/client/app/core/cv/cv.module.js
  *
- * Function to connect to the mongo db
- *
- * connect() - Start connection
+ * angular.module() - Define the core.cv module and register its
+ *                    dependencies
 *********************************************************************/
 'use strict';
 
-var Mongoose = require('mongoose').Mongoose;
-
-/*********************************************************************
- * connect() - Start db connection, then callback to start server.
-*********************************************************************/
-module.exports.connect = function connect(callback) {
-  //Connect to the trsuch db
-  var trsuchInstance = new Mongoose();
-  trsuchInstance.connect('mongodb://localhost:27017/trsuch');
-  var dbTrsuch = trsuchInstance.connection;
-
-  //Connect to the code db
-  var codeInstance = new Mongoose();
-  codeInstance.connect('mongodb://localhost:27017/code');
-  var dbCode = codeInstance.connection;
-
-  callback(dbTrsuch, dbCode);
-}
+angular.module('core.cv', ['ngResource']);

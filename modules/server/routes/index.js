@@ -27,6 +27,7 @@
  *
  * Functions controlling routes for the index html code
  *
+ * GET intro - Get the home page data from the trsuch db
  * GET / - Render home page
  * GET index - Render home page
 *********************************************************************/
@@ -34,6 +35,23 @@
 
 var express = require('express');
 var router  = express.Router();
+
+/*********************************************************************
+ * GET intro - Get the home page introduction paragraph.
+*********************************************************************/
+router.get('/intro', function(req, res, next) {
+  var dbTrsuch = req.dbTrsuch;
+  var introduction = dbTrsuch.model('Intro',
+                                   { introduction: String },
+                                   'intro');
+
+  introduction.find(function(err, items){
+    if (err) {
+      console.log('db find error: ' + err);
+    }
+    res.json(items);
+  });
+});
 
 /*********************************************************************
  * GET / - Render home page

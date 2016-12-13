@@ -25,11 +25,36 @@
 /*********************************************************************
  * modules/client/app/app.module.js
  *
+ * angular.module() - Define the 'indexApp' module and register its
+ *                    dependencies
+ * angular.module() - Define the 'cvApp' module and register its
+ *                    dependencies
  * angular.module() - Define the 'sourceApp' module and register its
  *                    dependencies
 *********************************************************************/
 'use strict';
 
+/*********************************************************************
+ * indexApp module definition
+*********************************************************************/
+angular.module('indexApp', [
+  'ngRoute',
+  'core',
+  'index'
+]);
+
+/*********************************************************************
+ * cvApp module definition
+*********************************************************************/
+angular.module('cvApp', [
+  'ngRoute',
+  'core',
+  'cv'
+]);
+
+/*********************************************************************
+ * sourceApp module definition
+*********************************************************************/
 angular.module('sourceApp', [
   'ngRoute',
   'core',

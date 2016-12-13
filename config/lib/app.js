@@ -40,8 +40,8 @@ var mongoose = require('./mongoose'),
  *          to start server.
 *********************************************************************/
 module.exports.init = function init(callback) {
-  mongoose.connect(function(db) {
-    var app = express.init(db);
+  mongoose.connect(function(dbTrsuch, dbCode) {
+    var app = express.init(dbTrsuch, dbCode);
     callback(app);
   });
 }

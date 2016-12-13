@@ -23,29 +23,51 @@
 *********************************************************************/
 
 /*********************************************************************
- * config/lib/mongoose.js
+ * modules/server/routes/cv.js
  *
- * Function to connect to the mongo db
+ * Functions controlling routes for the curriculum vitae page
  *
- * connect() - Start connection
+ * GET / - Render home page
+ * GET /data - Get data from the trsuch db and the cv collection
 *********************************************************************/
 'use strict';
 
-var Mongoose = require('mongoose').Mongoose;
+var express = require('express');
+var router  = express.Router();
 
 /*********************************************************************
- * connect() - Start db connection, then callback to start server.
+ * GET / - Render cv page
 *********************************************************************/
-module.exports.connect = function connect(callback) {
-  //Connect to the trsuch db
-  var trsuchInstance = new Mongoose();
-  trsuchInstance.connect('mongodb://localhost:27017/trsuch');
-  var dbTrsuch = trsuchInstance.connection;
+router.get('/', function(req, res, next) {
+  res.render('cv', {});
+});
 
-  //Connect to the code db
-  var codeInstance = new Mongoose();
-  codeInstance.connect('mongodb://localhost:27017/code');
-  var dbCode = codeInstance.connection;
+/*********************************************************************
+ * GET /data - Get data from the cv collection
+*********************************************************************/
+router.get('/data', function(req, res, next) {
+  var dbTrsuch = req.dbTrsuch;
 
-  callback(dbTrsuch, dbCode);
-}
+  var cv = dbTrsuch.model('CV', {
+  name: String,
+  title: String,
+  summary: String,
+  experienceTitle: String,
+  experienceDates: String,
+  experiencecompany: String,
+  experience: Array,
+  keyskills: Array,
+  technicalSkills: Object,
+  educationLocation: String,
+  education: String
+  }, 'cv');
+
+  cv.find(function(err, items){
+    if (err) {
+      console.log('db find error: ' + err);
+    }
+    res.json(items);
+  });
+});
+
+module.exports = router;

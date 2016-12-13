@@ -1,0 +1,44 @@
+{
+  "name": "Thomas R. Suchyta",
+  "title": "Senior Software Engineer and Devlopment Lead",
+  "summary": "A senior software engineer and manager with twenty years of experience who has developed, led, and released numerous compiler software releases to a wide range of industrial customers. Managed and developed automation, engineers, and processes for the compiler QA team, maintaining the quality of a complex code base and meeting the demands of hundreds of customers. Experienced in C/C++, Perl, PHP, JavaScript as well as Agile development processes. Managed up to six direct reports, handling performance reviews, assigning tasks and responsibilities, and mentoring.",
+  "experienceTitle": "Senior Software Engineer and Team Lead",
+  "experienceDates": "1996 - present",
+  "experienceCompany": "Texas Instruments, Sugar Land, TX",
+  "experience": [
+    {
+      "paragraph": "Developed C/C++ compiler software for TI DSPs and Microcontrollers. Led project teams through the complete software lifecycle of compiler releases, from customer engagement, requirement gathering, design plans, schedules, documentation, testing, build and release. Maintained customer satisfaction with the software through leading customer conference calls and on-site support.",
+      "subParagraph": "Implemented C++ code features to the compiler ranging from register allocation improvements, peephole optimizations, parser, assembly and linker improvements."
+    },
+    {
+      "paragraph": "Created the compiler QA team and managed up to six direct reports. Ensured the quality of the software was maintained and improved through creating test and build automation, software defect web apps, and software requirements and scheduling web sites.",
+      "subParagraph": [
+        {
+          "bullet": "Maintained a legacy C/C++ code base of 4-plus million LOC. Managed automated Perl, Python and Bash scripting to run several million separate test cases on multiple OS platforms that made up the compiler validation and build process."
+        },
+        {
+          "bullet": "Developed PHP and Perl code to develop a web site to integrate customer priorities, team schedules with defect tracking through IBM Clearquest."
+        }
+      ]
+    },
+    {
+      "paragraph": "Designed the TI safety qualification testing tool and led the team in the development of software that allows customers to ensure the compilers meet the requirements of the ISO 26262 and IEC 61508 safety standards.",
+      "subParagraph": "Written in Perl to automatically run 100,000+ separate C/C++ language test cases on TI hardware emulators, connected to Linux or Windows, and collecting and summarizing results and generating safety qualification reports."
+    },
+    {
+      "paragraph": "Led the compiler and emulation groups in managing their development processes to ensure their documentation met the qualifications of internal and external ISO 9001 audits.",
+      "subParagraph": "Project page is available at http://www.ti.com/tool/safeti_cqkit"
+    }
+  ],
+  "keySkills": ["Project Management", "Team Management", "QA Management",
+                 "Agile Development", "Root Cause Analysis"],
+  "technicalSkills": {
+    "languages": ["C/C++", "Perl", "PHP", "JavaScript", "HTML", "CSS", "Assembly"],
+    "software": ["GCC", "G++", "Make", "IBM Clearquest", "Drupal", "Node.js"],
+    "standards": ["ISO 26262 software tool qualification",
+                  "IEC 61508 software tool qualification"]
+  },
+  "educationLocation": "Michigan Technological University, Houghton, MI",
+  "education": ["M.S., Computer Science 1998",
+                "B.S., Computer Science 1997, summa cum laude"]
+}

@@ -30,4 +30,6 @@
 *********************************************************************/
 'use strict';
 
-angular.module('core', ['core.sources']);
+angular.module('core', ['core.intro',
+                        'core.cv',
+                        'core.sources']);

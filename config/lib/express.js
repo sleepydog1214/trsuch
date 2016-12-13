@@ -37,15 +37,17 @@ var express        = require('express'),
     path           = require('path'),
     routes         = require('../../modules/server/routes/index'),
     code           = require('../../modules/server/routes/code'),
+    cv             = require('../../modules/server/routes/cv'),
     methodOverride = require('method-override');
 
 /*********************************************************************
  * init() - Set views, paths, and routes of express.
 *********************************************************************/
-module.exports.init = function (db) {
+module.exports.init = function (dbTrsuch, dbCode) {
   var app = express();
 
-  db.on('error', console.error.bind(console, 'connection error:'));
+  dbTrsuch.on('error', console.error.bind(console, 'connection error:'));
+  dbCode.on('error', console.error.bind(console, 'connection error:'));
 
   app.set('views', path.join(__dirname, '../../modules/server/views'));
   app.set('view engine', 'pug');
@@ -57,7 +59,8 @@ module.exports.init = function (db) {
   app.use(methodOverride());
 
   app.use(function(req, res, next) {
-    req.db = db;
+    req.dbTrsuch = dbTrsuch;
+    req.dbCode = dbCode;
     next();
   });
 
@@ -67,6 +70,7 @@ module.exports.init = function (db) {
 
   app.use('/', routes);
   app.use('/code', code);
+  app.use('/cv', cv);
 
   return app;
 }

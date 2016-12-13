@@ -32,6 +32,47 @@
 'use strict';
 
 /*********************************************************************
+ * angular.module.config() - Config the $locationProvider and
+ *                           $routeProvider for the 'indexApp' module.
+*********************************************************************/
+angular.
+  module('indexApp').
+    config(['$locationProvider', '$routeProvider',
+      function config($locationProvider, $routeProvider) {
+        $locationProvider.hashPrefix('!');
+
+        $routeProvider.
+        //Template for home page
+        when('/', {
+          template: '<index></index>'
+        }).
+        when('/index', {
+          template: '<index></index>'
+        }).
+        otherwise('/');
+      }
+  ]);
+
+/*********************************************************************
+ * angular.module.config() - Config the $locationProvider and
+ *                           $routeProvider for the 'cvApp' module.
+*********************************************************************/
+angular.
+  module('cvApp').
+    config(['$locationProvider', '$routeProvider',
+      function config($locationProvider, $routeProvider) {
+        $locationProvider.hashPrefix('!');
+
+        $routeProvider.
+        //Template for home page
+        when('/cv', {
+          template: '<cv></cv>'
+        }).
+        otherwise('/cv');
+      }
+  ]);
+
+/*********************************************************************
  * angular.module.config() - Configure the $locationProvider,
  *                           $routeProvider, and $resourceProvider
  *                           for the 'sourceApp' module.
