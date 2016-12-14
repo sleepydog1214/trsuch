@@ -1,0 +1,12 @@
+{
+	"description" : "A bubble sort implementation.",
+	"location" : "algorithms/bubble-sort.js",
+	"name" : "bubble sort",
+	"type" : "sort"
+},
+{
+	"description" : "An insertion sort implementation.",
+	"location" : "algorithms/insertion-sort.js",
+	"name" : "insertion sort",
+	"type" : "sort"
+},

@@ -40,8 +40,8 @@ var router  = express.Router();
  * GET intro - Get the home page introduction paragraph.
 *********************************************************************/
 router.get('/intro', function(req, res, next) {
-  var dbTrsuch = req.dbTrsuch;
-  var introduction = dbTrsuch.model('Intro',
+  var db = req.db;
+  var introduction = db.model('Intro',
                                    { introduction: String },
                                    'intro');
 

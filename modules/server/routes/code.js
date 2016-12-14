@@ -54,8 +54,8 @@ router.get('/sources', function(req, res, next) {
   var result      = originalURL.match(regexId);
 
   //Query the algorithms collection
-  var dbCode = req.dbCode;
-  var algorithms = dbCode.model('Algorithms',
+  var db = req.db;
+  var algorithms = db.model('Algorithms',
                             { name: String,
                               type: String,
                               location: String,

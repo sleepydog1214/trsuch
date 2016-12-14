@@ -40,8 +40,8 @@ var mongoose = require('./mongoose'),
  *          to start server.
 *********************************************************************/
 module.exports.init = function init(callback) {
-  mongoose.connect(function(dbTrsuch, dbCode) {
-    var app = express.init(dbTrsuch, dbCode);
+  mongoose.connect(function(db) {
+    var app = express.init(db);
     callback(app);
   });
 }
@@ -53,7 +53,8 @@ module.exports.start = function start() {
   var self = this;
 
   self.init(function(app){
-    app.listen(8080);
-    console.log("App listening on port 8080");
+    var port = process.env.PORT || 8080;
+    app.listen(port);
+    console.log('App listening on port: ' + port);
   });
 }

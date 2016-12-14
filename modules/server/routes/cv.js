@@ -46,9 +46,9 @@ router.get('/', function(req, res, next) {
  * GET /data - Get data from the cv collection
 *********************************************************************/
 router.get('/data', function(req, res, next) {
-  var dbTrsuch = req.dbTrsuch;
+  var db = req.db;
 
-  var cv = dbTrsuch.model('CV', {
+  var cv = db.model('CV', {
   name: String,
   title: String,
   summary: String,

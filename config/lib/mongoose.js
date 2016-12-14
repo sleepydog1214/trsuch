@@ -39,13 +39,12 @@ var Mongoose = require('mongoose').Mongoose;
 module.exports.connect = function connect(callback) {
   //Connect to the trsuch db
   var trsuchInstance = new Mongoose();
-  trsuchInstance.connect('mongodb://localhost:27017/trsuch');
-  var dbTrsuch = trsuchInstance.connection;
+  var trsuchConnectString = 'mongodb://localhost:27017/trsuch';
+  if (process.env.MONGODB_URI) {
+    trsuchConnectString = process.env.MONGODB_URI;
+  }
+  trsuchInstance.connect(trsuchConnectString);
+  var db = trsuchInstance.connection;
 
-  //Connect to the code db
-  var codeInstance = new Mongoose();
-  codeInstance.connect('mongodb://localhost:27017/code');
-  var dbCode = codeInstance.connection;
-
-  callback(dbTrsuch, dbCode);
+  callback(db);
 }
