@@ -16,6 +16,6 @@ back to the template. In the express router:
   3. build a new json structure
   4. send it back to the client
 
-Document the code
-Upload to Heroku
+X Document the code
+X Upload to Heroku
 Add css

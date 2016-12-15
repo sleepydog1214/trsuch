@@ -37,27 +37,12 @@
 /*********************************************************************
  * indexApp module definition
 *********************************************************************/
-angular.module('indexApp', [
+angular.module('trsuchApp', [
   'ngRoute',
+  'ngMaterial',
   'core',
-  'index'
-]);
-
-/*********************************************************************
- * cvApp module definition
-*********************************************************************/
-angular.module('cvApp', [
-  'ngRoute',
-  'core',
-  'cv'
-]);
-
-/*********************************************************************
- * sourceApp module definition
-*********************************************************************/
-angular.module('sourceApp', [
-  'ngRoute',
-  'core',
+  'index',
+  'cv',
   'sourceList',
   'sourceCode'
 ]);

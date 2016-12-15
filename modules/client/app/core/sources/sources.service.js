@@ -34,7 +34,7 @@ angular.
   module('core.sources').
     factory('Sources', ['$resource',
       function($resource) {
-        return $resource('sources/', {}, {
+        return $resource('/code/sources/', {}, {
           query: {
             method: 'GET',
             //The sourceID gets an individual source program

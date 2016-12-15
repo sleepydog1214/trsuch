@@ -28,7 +28,6 @@
  * Functions controlling routes for the index html code
  *
  * GET intro - Get the home page data from the trsuch db
- * GET / - Render home page
  * GET index - Render home page
 *********************************************************************/
 'use strict';
@@ -51,13 +50,6 @@ router.get('/intro', function(req, res, next) {
     }
     res.json(items);
   });
-});
-
-/*********************************************************************
- * GET / - Render home page
-*********************************************************************/
-router.get('/', function(req, res, next) {
-  res.render('index', {});
 });
 
 /*********************************************************************

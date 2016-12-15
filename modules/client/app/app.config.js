@@ -36,7 +36,7 @@
  *                           $routeProvider for the 'indexApp' module.
 *********************************************************************/
 angular.
-  module('indexApp').
+  module('trsuchApp').
     config(['$locationProvider', '$routeProvider',
       function config($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
@@ -49,50 +49,16 @@ angular.
         when('/index', {
           template: '<index></index>'
         }).
-        otherwise('/');
-      }
-  ]);
-
-/*********************************************************************
- * angular.module.config() - Config the $locationProvider and
- *                           $routeProvider for the 'cvApp' module.
-*********************************************************************/
-angular.
-  module('cvApp').
-    config(['$locationProvider', '$routeProvider',
-      function config($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('!');
-
-        $routeProvider.
-        //Template for home page
         when('/cv', {
           template: '<cv></cv>'
         }).
-        otherwise('/cv');
-      }
-  ]);
-
-/*********************************************************************
- * angular.module.config() - Configure the $locationProvider,
- *                           $routeProvider, and $resourceProvider
- *                           for the 'sourceApp' module.
-*********************************************************************/
-angular.
-  module('sourceApp').
-    config(['$locationProvider', '$routeProvider', '$resourceProvider',
-      function config($locationProvider, $routeProvider, $resourceProvider) {
-        $locationProvider.hashPrefix('!');
-        $resourceProvider.defaults.stripTrailingSlashes = false;
-
-        $routeProvider.
-          //Template for the list of programs
-          when('/source', {
-            template: '<source-list></source-list>'
-          }).
-          //Template for an individual program
-          when('/sources/:sourceId', {
-            template: '<source-code></source-code>'
-          }).
-          otherwise('/source');
+        when('/source', {
+          template: '<source-list></source-list>'
+        }).
+        //Template for an individual program
+        when('/sources/:sourceId', {
+          template: '<source-code></source-code>'
+        }).
+        otherwise('/');
       }
   ]);

@@ -27,20 +27,12 @@
  *
  * Functions controlling routes for the curriculum vitae page
  *
- * GET / - Render home page
  * GET /data - Get data from the trsuch db and the cv collection
 *********************************************************************/
 'use strict';
 
 var express = require('express');
 var router  = express.Router();
-
-/*********************************************************************
- * GET / - Render cv page
-*********************************************************************/
-router.get('/', function(req, res, next) {
-  res.render('cv', {});
-});
 
 /*********************************************************************
  * GET /data - Get data from the cv collection

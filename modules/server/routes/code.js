@@ -27,7 +27,6 @@
  *
  * Functions tto render the algorithm and data structure pages
  *
- * GET source - Render the program list PUG html list
  * GET sources - Render the program list or an individual program
 *********************************************************************/
 'use strict';
@@ -35,13 +34,6 @@
 var express = require('express');
 var router  = express.Router();
 var fs      = require('fs');
-
-/*********************************************************************
- * GET source - Render the source.pug view
-*********************************************************************/
-router.get('/source', function(req, res, next) {
-  res.render('source', {});
-});
 
 /*********************************************************************
  * GET sources - Render from the db either the list of programs

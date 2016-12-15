@@ -34,7 +34,7 @@ angular.
   module('core.cv').
     factory('CV', ['$resource',
       function($resource) {
-        return $resource('data/', {}, {
+        return $resource('/cv/data/', {}, {
           query: {
             method: 'GET',
             isArray: true
