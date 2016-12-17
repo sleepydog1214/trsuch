@@ -23,22 +23,22 @@
 *********************************************************************/
 
 /*********************************************************************
- * modules/client/app/index/index.component.js
+ * modules/client/app/core/navigation/navigation.services.js
  *
- * angular.module.component() - Define the 'index' module
- *                              'index' component and its controller
+ * angular.module.factory() - Define the 'Navigation' service and factory
+ *                            resource function
 *********************************************************************/
 'use strict';
 
 angular.
-  module('index').
-    component('index', {
-      templateUrl: '../index/index.template.html',
-      controller: ['Intro',
-        function IndexController(Intro) {
-          var self = this;
-
-          self.intro = Intro.query();
-        }
-      ]
-    });
+  module('core.navigation').
+    factory('Navigation', ['$resource',
+      function($resource) {
+        return $resource('nav/', {}, {
+          query: {
+            method: 'GET',
+            isArray: true
+          }
+        });
+      }
+    ]);

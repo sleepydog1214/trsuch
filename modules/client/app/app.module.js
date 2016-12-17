@@ -25,11 +25,7 @@
 /*********************************************************************
  * modules/client/app/app.module.js
  *
- * angular.module() - Define the 'indexApp' module and register its
- *                    dependencies
- * angular.module() - Define the 'cvApp' module and register its
- *                    dependencies
- * angular.module() - Define the 'sourceApp' module and register its
+ * angular.module() - Define the 'trsuchApp' module and register its
  *                    dependencies
 *********************************************************************/
 'use strict';
@@ -41,6 +37,7 @@ angular.module('trsuchApp', [
   'ngRoute',
   'ngMaterial',
   'core',
+  'core.navigation',
   'index',
   'cv',
   'sourceList',

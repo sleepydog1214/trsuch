@@ -28,6 +28,8 @@
  *
  * angular.module.config() - Configure the templates for the source
  *                           program routes
+ * angulat.module.component() - Add a component with a controller to
+ *                              query the site navigation data
 *********************************************************************/
 'use strict';
 
@@ -62,3 +64,21 @@ angular.
         otherwise('/');
       }
   ]);
+
+
+/*********************************************************************
+ * angular.module.component() - Add a component to control the
+ * navigation side bar.
+*********************************************************************/
+angular.
+  module('trsuchApp').
+    component('navigation', {
+      templateUrl: 'app.template.html',
+      controller: ['Navigation',
+        function NavigationController(Navigation) {
+          var self = this;
+
+          self.nav = Navigation.query();
+        }
+      ]
+    });

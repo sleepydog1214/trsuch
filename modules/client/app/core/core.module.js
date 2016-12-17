@@ -31,5 +31,6 @@
 'use strict';
 
 angular.module('core', ['core.intro',
+                        'core.navigation',
                         'core.cv',
                         'core.sources']);

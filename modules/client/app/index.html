@@ -32,6 +32,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../angular-material/angular-material.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="../css/app.css">
     <script src="../angular/angular.js"></script>
     <script src="../angular-animate/angular-animate.js"></script>
     <script src="../angular-aria/angular-aria.js"></script>
@@ -45,6 +46,8 @@
     <script src="../core/core.module.js"></script>
     <script src="../core/intro/intro.module.js"></script>
     <script src="../core/intro/intro.service.js"></script>
+    <script src="../core/navigation/navigation.module.js"></script>
+    <script src="../core/navigation/navigation.service.js"></script>
     <script src="../core/cv/cv.module.js"></script>
     <script src="../core/cv/cv.service.js"></script>
     <script src="../core/sources/sources.module.js"></script>
@@ -58,18 +61,49 @@
     <script src="../source-code/source-code.module.js"></script>
     <script src="../source-code/source-code.component.js"></script>
   </head>
+<!-- *****************************************************************
+ * Start html body
+ **************************************************************** -->
   <body layout="column">
-    <md-toolbar layout="row">
+
+<!-- *****************************************************************
+ * Top toolbar
+ **************************************************************** -->
+    <md-toolbar
+      layout="row">
       <div class="md-toolbar-tools">
-        <h1 class="md-title">Thomas R. Suchyta</h1>
+<!-- *****************************************************************
+        <h1 class="md-title" flex>Thomas R. Suchyta</h1>
+ **************************************************************** -->
+        <md-icon md-svg-src="../images/home-1.svg" class="title" flex>
+        </md-icon>
         <h2 class="md-subhead">Senior Software Engineer and Development Lead</h2>
       </div>
     </md-toolbar>
-    <ul>
-      <li><a href="#!/">Home</a></li>
-      <li><a href="#!/cv/">Curriculum Vitae</a></li>
-      <li><a href="#!/source">Code Source List</a></li>
-    </ul>
-    <div ng-view></div>
+
+<!-- *****************************************************************
+ * Content container
+ **************************************************************** -->
+    <div class="container" layout="row" flex>
+      <md-content
+        id="content"
+        flex>
+      <div ng-view></div>
+      </md-content>
+
+<!-- *****************************************************************
+ * Sidebar navigation
+ **************************************************************** -->
+      <navigation layout="row"></navigation>
+    </div>
+
+<!-- *****************************************************************
+ * Bottom toolbar
+ **************************************************************** -->
+  <md-toolbar
+    layout="row">
+    <p>Copyright 2016 Thomas R. Suchyta</p>
+  </md-toobar>
+
   </body>
 </html>

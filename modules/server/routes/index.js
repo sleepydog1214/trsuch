@@ -29,6 +29,7 @@
  *
  * GET intro - Get the home page data from the trsuch db
  * GET index - Render home page
+ * GET nav - Get data for the site navigation
 *********************************************************************/
 'use strict';
 
@@ -41,10 +42,30 @@ var router  = express.Router();
 router.get('/intro', function(req, res, next) {
   var db = req.db;
   var introduction = db.model('Intro',
-                                   { introduction: String },
-                                   'intro');
+                              { introduction: String },
+                              'intro');
 
   introduction.find(function(err, items){
+    if (err) {
+      console.log('db find error: ' + err);
+    }
+    res.json(items);
+  });
+});
+
+/*********************************************************************
+ * GET nav - Get the navigation data
+*********************************************************************/
+router.get('/nav', function(req, res, next) {
+  var db = req.db;
+  var nav = db.model('Navgation',
+                     { title: String,
+                       url: String,
+                       svg: String,
+                       label: String },
+                     'navigation');
+
+  nav.find(function(err, items){
     if (err) {
       console.log('db find error: ' + err);
     }

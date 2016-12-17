@@ -23,22 +23,11 @@
 *********************************************************************/
 
 /*********************************************************************
- * modules/client/app/index/index.component.js
+ * modules/client/app/core/navigation/navigation.module.js
  *
- * angular.module.component() - Define the 'index' module
- *                              'index' component and its controller
+ * angular.module() - Define the core.navigation module and register its
+ *                    dependencies
 *********************************************************************/
 'use strict';
 
-angular.
-  module('index').
-    component('index', {
-      templateUrl: '../index/index.template.html',
-      controller: ['Intro',
-        function IndexController(Intro) {
-          var self = this;
-
-          self.intro = Intro.query();
-        }
-      ]
-    });
+angular.module('core.navigation', ['ngResource']);

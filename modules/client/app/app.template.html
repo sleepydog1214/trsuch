@@ -1,4 +1,4 @@
-/*********************************************************************
+<!-- *****************************************************************
  The MIT License (MIT)
 
  Copyright (c) 2016 Thomas Suchyta
@@ -20,25 +20,28 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-*********************************************************************/
+****************************************************************** -->
+<!-- *****************************************************************
+ * modules/client/app/app.template.html
+****************************************************************** -->
 
-/*********************************************************************
- * modules/client/app/index/index.component.js
- *
- * angular.module.component() - Define the 'index' module
- *                              'index' component and its controller
-*********************************************************************/
-'use strict';
-
-angular.
-  module('index').
-    component('index', {
-      templateUrl: '../index/index.template.html',
-      controller: ['Intro',
-        function IndexController(Intro) {
-          var self = this;
-
-          self.intro = Intro.query();
-        }
-      ]
-    });
+<!-- *****************************************************************
+ * Draw the sidebar navigation
+****************************************************************** -->
+<md-sidenav
+  class="md-sidenav-left"
+  md-component-id="left"
+  md-is-locked-open="true">
+  <md-list>
+    <md-list-item ng-repeat="navData in $ctrl.nav">
+      <md-button>
+        <md-icon
+          md-svg-src="{{navData.svg}}"
+          class="navIcons"
+          aria-label="{{navData.label}}">
+        </md-icon>
+        <a href="{{navData.url}}">{{navData.title}}</a>
+      </md-button>
+    </md-list-item>
+  </md-list>
+</md-sidenav>
