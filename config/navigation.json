@@ -1,0 +1,18 @@
+{
+  "title": "Home",
+  "url": "#!/index/",
+  "svg": "../images/home-3.svg",
+  "label": "home page"
+}
+{
+  "title": "About Me",
+  "url": "#!/cv/",
+  "svg": "../images/trsuch-3.svg",
+  "label": "about me page"
+}
+{
+  "title": "Code Examples",
+  "url": "#!/source/",
+  "svg": "../images/trsuch-3.svg",
+  "label": "about me page"
+}
