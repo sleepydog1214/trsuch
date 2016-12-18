@@ -32,7 +32,9 @@
  **************************************************************** -->
 <md-toolbar>
   <div class="md-toolbar-tools">
-    <md-icon md-svg-src="{{$ctrl.data[0].title}}">
+    <md-icon
+      md-svg-src="{{$ctrl.data[0].title}}"
+      class="title">
     </md-icon>
     <h2 class="md-subhead">{{$ctrl.data[0].subtitle}}</h2>
   </div>
@@ -60,7 +62,8 @@
       <md-button ng-href="{{navData.url}}">
         <md-icon
           md-svg-src="{{navData.svg}}"
-          aria-label="{{navData.label}}">
+          aria-label="{{navData.label}}"
+          class="navIcons">
         </md-icon>
         <p>{{navData.title}}</p>
       </md-button>

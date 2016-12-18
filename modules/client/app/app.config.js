@@ -39,9 +39,13 @@
 *********************************************************************/
 angular.
   module('trsuchApp').
-    config(['$locationProvider', '$routeProvider',
-      function config($locationProvider, $routeProvider) {
+    config(['$locationProvider', '$routeProvider', '$mdIconProvider',
+      function config($locationProvider, $routeProvider, $mdIconProvider) {
         $locationProvider.hashPrefix('!');
+
+        // Preload the svg icons
+        $mdIconProvider.defaultIconSet('../svg/app.svg', 128);
+        $mdIconProvider.icon('title', '../svg/title.svg');
 
         $routeProvider.
         //Template for home page
