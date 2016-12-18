@@ -68,17 +68,17 @@ angular.
 
 /*********************************************************************
  * angular.module.component() - Add a component to control the
- * navigation side bar.
+ * site-wide data.
 *********************************************************************/
 angular.
   module('trsuchApp').
-    component('navigation', {
+    component('site', {
       templateUrl: 'app.template.html',
-      controller: ['Navigation',
-        function NavigationController(Navigation) {
+      controller: ['Site',
+        function SiteController(Site) {
           var self = this;
 
-          self.nav = Navigation.query();
+          self.data = Site.query();
         }
       ]
     });

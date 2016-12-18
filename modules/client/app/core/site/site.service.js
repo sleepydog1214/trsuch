@@ -23,11 +23,22 @@
 *********************************************************************/
 
 /*********************************************************************
- * modules/client/app/core/navigation/navigation.module.js
+ * modules/client/app/core/site/site.services.js
  *
- * angular.module() - Define the core.navigation module and register its
- *                    dependencies
+ * angular.module.factory() - Define the 'Site' service and factory
+ *                            resource function
 *********************************************************************/
 'use strict';
 
-angular.module('core.navigation', ['ngResource']);
+angular.
+  module('core.site').
+    factory('Site', ['$resource',
+      function($resource) {
+        return $resource('site/', {}, {
+          query: {
+            method: 'GET',
+            isArray: true
+          }
+        });
+      }
+    ]);

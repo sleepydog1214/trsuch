@@ -25,23 +25,56 @@
  * modules/client/app/app.template.html
 ****************************************************************** -->
 
+<body layout="column">
+
 <!-- *****************************************************************
- * Draw the sidebar navigation
-****************************************************************** -->
+ * Top toolbar
+ **************************************************************** -->
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-icon md-svg-src="{{$ctrl.data[0].title}}">
+    </md-icon>
+    <h2 class="md-subhead">{{$ctrl.data[0].subtitle}}</h2>
+  </div>
+</md-toolbar>
+
+<!-- *****************************************************************
+ * Content container
+ **************************************************************** -->
+<div class="container" layout="row" flex>
+  <md-content
+    class="md-whiteframe-15dp"
+    flex>
+  <div ng-view></div>
+  </md-content>
+
+<!-- *****************************************************************
+ * Sidebar navigation
+ **************************************************************** -->
 <md-sidenav
   class="md-sidenav-left"
   md-component-id="left"
   md-is-locked-open="true">
   <md-list>
-    <md-list-item ng-repeat="navData in $ctrl.nav">
-      <md-button>
+    <md-list-item ng-repeat="navData in $ctrl.data[0].navigation">
+      <md-button ng-href="{{navData.url}}">
         <md-icon
           md-svg-src="{{navData.svg}}"
-          class="navIcons"
           aria-label="{{navData.label}}">
         </md-icon>
-        <a href="{{navData.url}}">{{navData.title}}</a>
+        <p>{{navData.title}}</p>
       </md-button>
     </md-list-item>
   </md-list>
 </md-sidenav>
+
+</div> <!-- Close container div -->
+
+<!-- *****************************************************************
+ * Bottom toolbar
+ **************************************************************** -->
+<md-toolbar>
+  <p>{{$ctrl.data[0].footer}}</p>
+</md-toobar>
+
+</body>

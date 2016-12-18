@@ -37,7 +37,7 @@ angular.module('trsuchApp', [
   'ngRoute',
   'ngMaterial',
   'core',
-  'core.navigation',
+  'core.site',
   'index',
   'cv',
   'sourceList',

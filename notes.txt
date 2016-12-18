@@ -18,4 +18,5 @@ back to the template. In the express router:
 
 X Document the code
 X Upload to Heroku
-Add css
+Create single svg file.
+Add css.

@@ -46,8 +46,8 @@
     <script src="../core/core.module.js"></script>
     <script src="../core/intro/intro.module.js"></script>
     <script src="../core/intro/intro.service.js"></script>
-    <script src="../core/navigation/navigation.module.js"></script>
-    <script src="../core/navigation/navigation.service.js"></script>
+    <script src="../core/site/site.module.js"></script>
+    <script src="../core/site/site.service.js"></script>
     <script src="../core/cv/cv.module.js"></script>
     <script src="../core/cv/cv.service.js"></script>
     <script src="../core/sources/sources.module.js"></script>
@@ -61,49 +61,7 @@
     <script src="../source-code/source-code.module.js"></script>
     <script src="../source-code/source-code.component.js"></script>
   </head>
-<!-- *****************************************************************
- * Start html body
- **************************************************************** -->
-  <body layout="column">
 
-<!-- *****************************************************************
- * Top toolbar
- **************************************************************** -->
-    <md-toolbar
-      layout="row">
-      <div class="md-toolbar-tools">
-<!-- *****************************************************************
-        <h1 class="md-title" flex>Thomas R. Suchyta</h1>
- **************************************************************** -->
-        <md-icon md-svg-src="../images/home-1.svg" class="title" flex>
-        </md-icon>
-        <h2 class="md-subhead">Senior Software Engineer and Development Lead</h2>
-      </div>
-    </md-toolbar>
+ <site></site>
 
-<!-- *****************************************************************
- * Content container
- **************************************************************** -->
-    <div class="container" layout="row" flex>
-      <md-content
-        id="content"
-        flex>
-      <div ng-view></div>
-      </md-content>
-
-<!-- *****************************************************************
- * Sidebar navigation
- **************************************************************** -->
-      <navigation layout="row"></navigation>
-    </div>
-
-<!-- *****************************************************************
- * Bottom toolbar
- **************************************************************** -->
-  <md-toolbar
-    layout="row">
-    <p>Copyright 2016 Thomas R. Suchyta</p>
-  </md-toobar>
-
-  </body>
 </html>

@@ -1,18 +1,25 @@
 {
-  "title": "Home",
-  "url": "#!/index/",
-  "svg": "../images/home-3.svg",
-  "label": "home page"
-}
-{
-  "title": "About Me",
-  "url": "#!/cv/",
-  "svg": "../images/trsuch-3.svg",
-  "label": "about me page"
-}
-{
-  "title": "Code Examples",
-  "url": "#!/source/",
-  "svg": "../images/trsuch-3.svg",
-  "label": "about me page"
+  "title": "../images/home-4.svg",
+  "subtitle": "Senior Software Engineer and Development Lead",
+  "footer": "Copyright 2016 Thomas R. Suchyta",
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "#!/index/",
+      "svg": "../images/home-3.svg",
+      "label": "home page"
+    },
+    {
+      "title": "About Me",
+      "url": "#!/cv/",
+      "svg": "../images/trsuch-3.svg",
+      "label": "about me page"
+    },
+    {
+      "title": "Code Examples",
+      "url": "#!/source/",
+      "svg": "../images/trsuch-3.svg",
+      "label": "about me page"
+    }
+  ]
 }
