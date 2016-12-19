@@ -30,14 +30,23 @@
 <!-- *****************************************************************
  * Top toolbar
  **************************************************************** -->
-<md-toolbar>
-  <div class="md-toolbar-tools">
+<md-toolbar layout="row">
+  <md-button
+    ng-click="$ctrl.toggleMenu();"
+    hide-gt-xs>
     <md-icon
-      md-svg-src="{{$ctrl.data[0].title}}"
-      class="title">
+      md-svg-icon="menu"
+      aria-label="menu">
     </md-icon>
-    <h2 class="md-subhead">{{$ctrl.data[0].subtitle}}</h2>
-  </div>
+  </md-button>
+  <md-button ng-href="#!/">
+  <md-icon
+    md-svg-icon="{{$ctrl.data[0].title}}"
+    aria-label="title"
+    class="title">
+  </md-icon>
+  </md-button>
+  <h2 class="md-subhead">{{$ctrl.data[0].subtitle}}</h2>
 </md-toolbar>
 
 <!-- *****************************************************************
@@ -45,7 +54,6 @@
  **************************************************************** -->
 <div class="container" layout="row" flex>
   <md-content
-    class="md-whiteframe-15dp"
     flex>
   <div ng-view></div>
   </md-content>
@@ -56,12 +64,13 @@
 <md-sidenav
   class="md-sidenav-left"
   md-component-id="left"
-  md-is-locked-open="true">
-  <md-list>
+  md-is-locked-open="$mdMedia('gt-xs')">
+  <md-list ng-click="$ctrl.toggleMenu()">
     <md-list-item ng-repeat="navData in $ctrl.data[0].navigation">
       <md-button ng-href="{{navData.url}}">
         <md-icon
           md-svg-src="{{navData.svg}}"
+          hide-xs
           aria-label="{{navData.label}}"
           class="navIcons">
         </md-icon>

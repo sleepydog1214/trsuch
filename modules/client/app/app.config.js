@@ -39,13 +39,22 @@
 *********************************************************************/
 angular.
   module('trsuchApp').
-    config(['$locationProvider', '$routeProvider', '$mdIconProvider',
-      function config($locationProvider, $routeProvider, $mdIconProvider) {
+    config(['$locationProvider', '$routeProvider',
+            '$mdIconProvider', '$mdThemingProvider',
+      function config($locationProvider, $routeProvider,
+        $mdIconProvider, $mdThemingProvider) {
+        // Set the app's deep linking prefix
         $locationProvider.hashPrefix('!');
 
         // Preload the svg icons
         $mdIconProvider.defaultIconSet('../svg/app.svg', 128);
         $mdIconProvider.icon('title', '../svg/title.svg');
+        $mdIconProvider.icon('menu', '../svg/ic_menu_black_24px.svg');
+
+        // Set the theme
+        $mdThemingProvider.theme('default')
+          .primaryPalette('grey')
+          .accentPalette('indigo');
 
         $routeProvider.
         //Template for home page
@@ -78,11 +87,15 @@ angular.
   module('trsuchApp').
     component('site', {
       templateUrl: 'app.template.html',
-      controller: ['Site',
-        function SiteController(Site) {
+      controller: ['Site', '$mdSidenav',
+        function SiteController(Site, $mdSidenav) {
           var self = this;
 
           self.data = Site.query();
+
+          self.toggleMenu = function () {
+            $mdSidenav('left').toggle();
+          };
         }
       ]
     });
