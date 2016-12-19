@@ -33,7 +33,7 @@
 <md-toolbar layout="row">
   <md-button
     ng-click="$ctrl.toggleMenu();"
-    hide-gt-xs>
+    hide-gt-md>
     <md-icon
       md-svg-icon="menu"
       aria-label="menu">
@@ -64,13 +64,13 @@
 <md-sidenav
   class="md-sidenav-left"
   md-component-id="left"
-  md-is-locked-open="$mdMedia('gt-xs')">
+  md-is-locked-open="$mdMedia('gt-md')">
   <md-list ng-click="$ctrl.toggleMenu()">
     <md-list-item ng-repeat="navData in $ctrl.data[0].navigation">
       <md-button ng-href="{{navData.url}}">
         <md-icon
           md-svg-src="{{navData.svg}}"
-          hide-xs
+          hide-md
           aria-label="{{navData.label}}"
           class="navIcons">
         </md-icon>
