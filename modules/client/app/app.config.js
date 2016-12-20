@@ -53,7 +53,7 @@ angular.
 
         // Set the theme
         $mdThemingProvider.theme('default')
-          .primaryPalette('grey')
+          .primaryPalette('grey', { 'default': '300'})
           .accentPalette('indigo');
 
         $routeProvider.
@@ -87,15 +87,53 @@ angular.
   module('trsuchApp').
     component('site', {
       templateUrl: 'app.template.html',
-      controller: ['Site', '$mdSidenav',
-        function SiteController(Site, $mdSidenav) {
+      controller: ['Site', '$location', '$mdSidenav', '$mdMedia',
+        function SiteController(Site, $location, $mdSidenav, $mdMedia) {
           var self = this;
 
           self.data = Site.query();
 
+          // toggleMenu() - Toggle the side bar
           self.toggleMenu = function () {
-            $mdSidenav('left').toggle();
+            $mdSidenav('right').toggle();
           };
+
+          // setTitleClass() - Set the title class based on screen size.
+          self.setTitleClass = function () {
+            if ($mdMedia('gt-sm')) {
+              return 'md-display-1';
+            }
+            else {
+              return 'md-title';
+            }
+          }
+
+          // setSubTitleClass() - Set the subtitle class based on screen size.
+          self.setSubTitleClass = function () {
+            if ($mdMedia('gt-sm')) {
+              return 'md-headline';
+            }
+            else {
+              return 'md-body-2';
+            }
+          }
+
+          // setNavButtonClass() - Set the sidebar button class based on
+          //                       whether it's selected.
+          self.setNavButtonClass = function (url) {
+            var currPath = $location.path();
+
+            if (currPath === '/') {
+              currPath = 'index';
+            }
+
+            if (url.search(currPath) >= 0) {
+              return 'navBtnSelected';
+            }
+            else {
+              return 'navBtn';
+            }
+          }
         }
       ]
     });

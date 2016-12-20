@@ -33,24 +33,25 @@
 <md-toolbar
   class="md-tall"
   layout="row"
-  layout-align="space-around center">
+  layout-align="center"
+  layout-fill style="min-height: 170px;">
   <md-button
     ng-click="$ctrl.toggleMenu();"
-    hide-gt-md
+    hide-gt-sm
     class="md-icon-button md-primary">
     <md-icon
       md-svg-icon="menu"
       aria-label="menu">
     </md-icon>
   </md-button>
-  <md-button ng-href="#!/" class="md-fab">
-  <md-icon
-    md-svg-icon="title"
-    aria-label="title">
-  </md-icon>
-  </md-button>
-  <h1 class="md-headline">{{$ctrl.data[0].title}}</h1>
-  <h2 class="md-subhead">{{$ctrl.data[0].subtitle}}</h2>
+  <div id="logo">
+    <a ng-href="#!/">
+      <h1 class="{{$ctrl.setTitleClass()}}">{{$ctrl.data[0].title}}</h1>
+    </a>
+    <div id="subtitle">
+      <h2 class="{{$ctrl.setSubTitleClass()}}">{{$ctrl.data[0].subtitle}}</h2>
+    </div>
+  </div>
 </md-toolbar>
 
 <!-- *****************************************************************
@@ -66,18 +67,18 @@
  * Sidebar navigation
  **************************************************************** -->
 <md-sidenav
-  class="md-sidenav-left"
-  md-component-id="left"
-  md-is-locked-open="$mdMedia('gt-md')">
+  class="md-sidenav-right"
+  md-component-id="right"
+  md-is-locked-open="$mdMedia('gt-sm')">
   <md-list ng-click="$ctrl.toggleMenu()">
     <md-list-item ng-repeat="navData in $ctrl.data[0].navigation">
       <md-button
         ng-href="{{navData.url}}"
-        class="md-raised">
+        class="{{$ctrl.setNavButtonClass(navData.url)}}">
         <md-icon
           md-svg-src="{{navData.svg}}"
           aria-label="{{navData.label}}"
-          hide show-gt-md
+          hide show-gt-sm
           class="navIcons">
         </md-icon>
         <p>{{navData.title}}</p>
@@ -91,7 +92,9 @@
 <!-- *****************************************************************
  * Bottom toolbar
  **************************************************************** -->
-<md-toolbar>
+<md-toolbar
+  layout="row"
+  layout-align="center">
   <p class="md-caption">{{$ctrl.data[0].footer}}</p>
 </md-toobar>
 

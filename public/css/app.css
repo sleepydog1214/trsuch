@@ -1,4 +1,33 @@
+a {
+  text-decoration: none;
+}
+
+#logo h1 {
+  color: #000;
+  text-shadow:
+    1px 1px 0 #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+#subtitle h2 {
+  width: 55%;
+}
+
 .navIcons {
   width: 30%;
   height: 30%;
+  padding-top: 2em;
+}
+
+.navBtn {
+  background-color: #BDBDBD;
+  width: 80%;
+}
+
+.navBtnSelected {
+  background-color: #E8EAF6;
+  width: 80%;
 }

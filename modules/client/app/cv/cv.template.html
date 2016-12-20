@@ -21,53 +21,55 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
 ****************************************************************** -->
-<h1>{{$ctrl.cv[0].name}}</h1>
-<h2>{{$ctrl.cv[0].title}}</h2>
-<h3>Summary</h3>
-<p>{{$ctrl.cv[0].summary}}</p>
-<h3>Experience</h3>
-<ul>
-  <li ng-repeat="skill in $ctrl.cv[0].experience">
-    <p>{{skill.paragraph}}</p>
-    <ul>
-      <li ng-repeat="subp in skill.subParagraph">
-        <p>{{subp.bullet}}</p>
-    </ul>
-  </li>
-</ul>
-<h3>Technical Skills</h3>
-<ul>
-  <li>Languages/Programming</li>
-    <ul>
-      <li ng-repeat="lang in $ctrl.cv[0].technicalSkills.languages">
-        <p>{{lang}}</p>
-      </li>
-    </ul>
-  <li>Software</li>
-    <ul>
-      <li ng-repeat="softw in $ctrl.cv[0].technicalSkills.software">
-        <p>{{softw}}</p>
-      </li>
-    </ul>
-  <li>Standards</li>
-    <ul>
-      <li ng-repeat="standard in $ctrl.cv[0].technicalSkills.standards">
-        <p>{{standard}}</p>
-      </li>
-    </ul>
-</ul>
-<h3>Key Skills</h3>
-<ul>
-  <li ng-repeat="skill in $ctrl.cv[0].keySkills">
-    <p>{{skill}}</p>
-  </li>
-</ul>
-<h3>Education</h3>
-<ul>
-  <li>{{$ctrl.cv[0].educationLocation}}</li>
-  <ul>
-    <li ng-repeat="degree in $ctrl.cv[0].degrees">
-      <p>{{degree}}</p>
-    </li>
-  </ul>
-</ul>
+<div layout-padding>
+  <h1 class="md-display-1">{{$ctrl.cv[0].name}}</h1>
+  <h2 class="md-headline">{{$ctrl.cv[0].title}}</h2>
+  <h3 class="md-title">Summary</h3>
+  <p class="md-body-2">{{$ctrl.cv[0].summary}}</p>
+  <h3 class="md-title">Experience</h3>
+  <md-list layout="column">
+    <md-list-item ng-repeat="skill in $ctrl.cv[0].experience">
+      <p class="md-body-1">{{skill.paragraph}}</p>
+      <md-list layout="column">
+        <md-list-item ng-repeat="subp in skill.subParagraph">
+          <p class="md-body-1">{{subp.bullet}}</p>
+      </md-list>
+    </md-list-item>
+  </md-list>
+  <h3 class="md-title">Technical Skills</h3>
+  <md-list>
+    <md-list-item>Languages/Programming</md-list-item>
+      <md-list>
+        <md-list-item ng-repeat="lang in $ctrl.cv[0].technicalSkills.languages">
+          <p class="md-body-1">{{lang}}</p>
+        </md-list-item>
+      </md-list>
+    <md-list-item>Software</md-list-item>
+      <md-list>
+        <md-list-item ng-repeat="softw in $ctrl.cv[0].technicalSkills.software">
+          <p class="md-body-1">{{softw}}</p>
+        </md-list-item>
+      </md-list>
+    <md-list-item>Standards</md-list-item>
+      <md-list>
+        <md-list-item ng-repeat="standard in $ctrl.cv[0].technicalSkills.standards">
+          <p class="md-body-1">{{standard}}</p>
+        </md-list-item>
+      </md-list>
+  </md-list>
+  <h3 class="md-title">Key Skills</h3>
+  <md-list>
+    <md-list-item ng-repeat="skill in $ctrl.cv[0].keySkills">
+      <p class="md-body-1">{{skill}}</p>
+    </md-list-item>
+  </md-list>
+  <h3 class="md-title">Education</h3>
+  <md-list>
+    <md-list-item>{{$ctrl.cv[0].educationLocation}}</md-list-item>
+    <md-list>
+      <md-list-item ng-repeat="degree in $ctrl.cv[0].degrees">
+        <p class="md-body-1">{{degree}}</p>
+      </md-list-item>
+    </md-list>
+  </md-list>
+</div>
