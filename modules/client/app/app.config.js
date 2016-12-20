@@ -48,7 +48,7 @@ angular.
 
         // Preload the svg icons
         $mdIconProvider.defaultIconSet('../svg/app.svg', 128);
-        $mdIconProvider.icon('title', '../svg/title.svg');
+        $mdIconProvider.icon('title', '../svg/title.svg', 128);
         $mdIconProvider.icon('menu', '../svg/ic_menu_black_24px.svg');
 
         // Set the theme

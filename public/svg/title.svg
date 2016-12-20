@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="644.16364"
-   height="92.324898"
-   viewBox="0 0 644.16365 92.324898"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
    id="title"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="home-4.svg">
+   sodipodi:docname="title.svg">
   <defs
      id="defs4873" />
   <sodipodi:namedview
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="331.86296"
-     inkscape:cy="128.35713"
+     inkscape:zoom="3.959798"
+     inkscape:cx="-37.928572"
+     inkscape:cy="45.97753"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1536"
-     inkscape:window-height="801"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="993"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -63,7 +63,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(130.0113,-66.731709)">
+     transform="translate(130.0113,-31.056607)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:60px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -91,18 +91,25 @@
        transform="scale(0.82722326,1.2088635)"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:109.79815674px;line-height:125%;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';letter-spacing:0px;word-spacing:0px;fill:#c03535;fill-opacity:1;stroke:#2c1212;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="text5419-0" />
-    <text
-       xml:space="preserve"
+    <g
+       transform="matrix(0.67299089,0,0,1.3649495,52.299286,175.15221)"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:82.23323822px;line-height:125%;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';letter-spacing:0.80767035px;word-spacing:0.12145419px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.78144073;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="-142.93262"
-       y="124.23592"
-       id="text5419-6"
-       sodipodi:linespacing="125%"
-       transform="scale(0.91836121,1.0888962)"><tspan
-         sodipodi:role="line"
-         id="tspan5421-4"
-         x="-142.93262"
-         y="124.23592"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';letter-spacing:1.31777799px;word-spacing:0.63156176px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.78144073;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Thomas R. Suchyta</tspan></text>
+       id="text5419-6">
+      <path
+         d="m -260.25975,-89.402515 55.1951,0 0,12.125814 -19.8558,0 0,50.086686 -15.44339,0 0,-50.086686 -19.89591,0 0,-12.125814 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';letter-spacing:1.31777799px;word-spacing:0.63156176px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.83205914;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path3504"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -175.12217,-61.965286 q 4.85177,0 6.93684,-1.889034 2.12515,-1.889032 2.12515,-6.212817 0,-4.281807 -2.12515,-6.128862 -2.08507,-1.847054 -6.93684,-1.847054 l -6.49577,0 0,16.077767 6.49577,0 z m -6.49577,11.16628 0,23.717872 -15.43749,0 0,-62.673915 23.57725,0 q 11.82872,0 17.32206,4.155863 5.53344,4.155876 5.53344,13.139274 0,6.212818 -2.88703,10.200775 -2.8469,3.987957 -8.62092,5.876988 3.16769,0.755614 5.65373,3.442239 2.52613,2.644644 5.09235,8.059873 l 8.38036,17.798903 -16.43992,0 -7.29772,-15.574034 q -2.20535,-4.701599 -4.4909,-6.422718 -2.24545,-1.72112 -6.0146,-1.72112 l -4.37061,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';letter-spacing:1.31777799px;word-spacing:0.63156176px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.84199739;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path3516"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -91.336923,-87.146918 0,12.873242 q -4.936591,-2.240595 -9.632357,-3.381263 -4.69578,-1.140665 -8.86979,-1.140665 -5.5386,0 -8.1875,1.548047 -2.64889,1.548048 -2.64889,4.807097 0,2.444286 1.76593,3.829382 1.80606,1.344357 6.50184,2.322072 l 6.5821,1.344357 q 9.993559,2.036906 14.207714,6.192192 4.214154,4.155289 4.214154,11.814058 0,10.062324 -5.899813,14.991645 -5.859682,4.888573 -17.940255,4.888573 -5.69914,0 -11.43841,-1.099929 -5.73927,-1.099932 -11.47854,-3.259057 l 0,-13.239891 q 5.73927,3.096097 11.07719,4.684877 5.37807,1.548058 10.35477,1.548058 5.05699,0 7.74602,-1.711009 2.68903,-1.710998 2.68903,-4.888573 0,-2.851675 -1.84621,-4.399723 -1.80606,-1.548048 -7.26439,-2.770193 l -5.98008,-1.344357 q -8.99019,-1.95543 -13.16421,-6.232931 -4.13387,-4.277501 -4.13387,-11.528884 0,-9.084598 5.77941,-13.973172 5.7794,-4.888573 16.61579,-4.888573 4.93658,0 10.1541,0.774024 5.217527,0.733286 10.796267,2.240596 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';letter-spacing:1.31777799px;word-spacing:0.63156176px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.8010006;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path3520"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>

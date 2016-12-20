@@ -30,22 +30,26 @@
 <!-- *****************************************************************
  * Top toolbar
  **************************************************************** -->
-<md-toolbar layout="row">
+<md-toolbar
+  class="md-tall"
+  layout="row"
+  layout-align="space-around center">
   <md-button
     ng-click="$ctrl.toggleMenu();"
-    hide-gt-md>
+    hide-gt-md
+    class="md-icon-button md-primary">
     <md-icon
       md-svg-icon="menu"
       aria-label="menu">
     </md-icon>
   </md-button>
-  <md-button ng-href="#!/">
+  <md-button ng-href="#!/" class="md-fab">
   <md-icon
-    md-svg-icon="{{$ctrl.data[0].title}}"
-    aria-label="title"
-    class="title">
+    md-svg-icon="title"
+    aria-label="title">
   </md-icon>
   </md-button>
+  <h1 class="md-headline">{{$ctrl.data[0].title}}</h1>
   <h2 class="md-subhead">{{$ctrl.data[0].subtitle}}</h2>
 </md-toolbar>
 
@@ -67,11 +71,13 @@
   md-is-locked-open="$mdMedia('gt-md')">
   <md-list ng-click="$ctrl.toggleMenu()">
     <md-list-item ng-repeat="navData in $ctrl.data[0].navigation">
-      <md-button ng-href="{{navData.url}}">
+      <md-button
+        ng-href="{{navData.url}}"
+        class="md-raised">
         <md-icon
           md-svg-src="{{navData.svg}}"
-          hide-md
           aria-label="{{navData.label}}"
+          hide show-gt-md
           class="navIcons">
         </md-icon>
         <p>{{navData.title}}</p>
@@ -86,7 +92,7 @@
  * Bottom toolbar
  **************************************************************** -->
 <md-toolbar>
-  <p>{{$ctrl.data[0].footer}}</p>
+  <p class="md-caption">{{$ctrl.data[0].footer}}</p>
 </md-toobar>
 
 </body>
