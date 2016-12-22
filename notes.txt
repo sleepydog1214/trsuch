@@ -19,8 +19,10 @@ back to the template. In the express router:
 X Document the code
 X Upload to Heroku
 X Create single svg file.
-Get the right svg icons.
-Add css.
-Update content.
+X Get the right svg icons.
+X Add css.
+X Update content.
+Proof read.
+Add bullet svgs.
 Get linkedin and github icons.
 Add more code.

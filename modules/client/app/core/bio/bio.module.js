@@ -1,4 +1,4 @@
-<!-- *****************************************************************
+/*********************************************************************
  The MIT License (MIT)
 
  Copyright (c) 2016 Thomas Suchyta
@@ -20,12 +20,14 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-****************************************************************** -->
-<div layout-padding>
-  <h3 class="md-headline">Introduction</h3>
-  <div class="trsuchText" layout-padding>
-    <div ng-bind-html="$ctrl.intro[0].introduction | linky:'_blank'">
-      <p class="md-body-1">{{$ctrl.intro[0].introduction}}</p>
-    </div>
-  </div>
-</div>
+*********************************************************************/
+
+/*********************************************************************
+ * modules/client/app/core/bio/bio.module.js
+ *
+ * angular.module() - Define the core.bio module and register its
+ *                    dependencies
+*********************************************************************/
+'use strict';
+
+angular.module('core.bio', ['ngResource']);

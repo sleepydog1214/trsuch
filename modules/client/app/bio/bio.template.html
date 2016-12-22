@@ -21,11 +21,11 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
 ****************************************************************** -->
-<div layout-padding>
-  <h3 class="md-headline">Introduction</h3>
-  <div class="trsuchText" layout-padding>
-    <div ng-bind-html="$ctrl.intro[0].introduction | linky:'_blank'">
-      <p class="md-body-1">{{$ctrl.intro[0].introduction}}</p>
+<div class="trsuchText" layout-padding>
+  <h1 class="md-display-1">Biography</h1>
+  <span ng-repeat="paragraph in $ctrl.text[0].paragraphs">
+    <div ng-bind-html="paragraph | linky:'_blank'">
+      <p class="md-body-1">{{paragraph}}</p>
     </div>
-  </div>
+  </span>
 </div>

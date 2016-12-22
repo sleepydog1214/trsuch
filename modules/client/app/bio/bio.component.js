@@ -1,4 +1,4 @@
-<!-- *****************************************************************
+/*********************************************************************
  The MIT License (MIT)
 
  Copyright (c) 2016 Thomas Suchyta
@@ -20,12 +20,25 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-****************************************************************** -->
-<div layout-padding>
-  <h3 class="md-headline">Introduction</h3>
-  <div class="trsuchText" layout-padding>
-    <div ng-bind-html="$ctrl.intro[0].introduction | linky:'_blank'">
-      <p class="md-body-1">{{$ctrl.intro[0].introduction}}</p>
-    </div>
-  </div>
-</div>
+*********************************************************************/
+
+/*********************************************************************
+ * modules/client/app/bio/bio.component.js
+ *
+ * angular.module.component() - Define the 'bio' module
+ *                              component and its controller
+*********************************************************************/
+'use strict';
+
+angular.
+  module('bio').
+    component('bio', {
+      templateUrl: '../bio/bio.template.html',
+      controller: ['Bio',
+        function BioController(Bio) {
+          var self = this;
+
+          self.text = Bio.query();
+        }
+      ]
+    });

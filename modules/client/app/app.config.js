@@ -64,6 +64,9 @@ angular.
         when('/index', {
           template: '<index></index>'
         }).
+        when('/bio', {
+          template: '<bio></bio>'
+        }).
         when('/cv', {
           template: '<cv></cv>'
         }).

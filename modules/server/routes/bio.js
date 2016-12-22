@@ -1,4 +1,4 @@
-<!-- *****************************************************************
+/*********************************************************************
  The MIT License (MIT)
 
  Copyright (c) 2016 Thomas Suchyta
@@ -20,12 +20,36 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-****************************************************************** -->
-<div layout-padding>
-  <h3 class="md-headline">Introduction</h3>
-  <div class="trsuchText" layout-padding>
-    <div ng-bind-html="$ctrl.intro[0].introduction | linky:'_blank'">
-      <p class="md-body-1">{{$ctrl.intro[0].introduction}}</p>
-    </div>
-  </div>
-</div>
+*********************************************************************/
+
+/*********************************************************************
+ * modules/server/routes/bio.js
+ *
+ * Functions controlling routes for the about me page
+ *
+ * GET /text - Get text from the trsuch db and the bio collection
+*********************************************************************/
+'use strict';
+
+var express = require('express');
+var router  = express.Router();
+
+/*********************************************************************
+ * GET /text - Get text from the bio collection
+*********************************************************************/
+router.get('/text', function(req, res, next) {
+  var db = req.db;
+
+  var bio = db.model('Bio', {
+    paragraphs: Array
+  }, 'bio');
+
+  bio.find(function(err, items){
+    if (err) {
+      console.log('db find error: ' + err);
+    }
+    res.json(items);
+  });
+});
+
+module.exports = router;

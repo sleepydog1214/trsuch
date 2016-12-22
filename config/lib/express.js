@@ -38,6 +38,7 @@ var express        = require('express'),
     routes         = require('../../modules/server/routes/index'),
     code           = require('../../modules/server/routes/code'),
     cv             = require('../../modules/server/routes/cv'),
+    bio            = require('../../modules/server/routes/bio'),
     methodOverride = require('method-override');
 
 /*********************************************************************
@@ -69,6 +70,7 @@ module.exports.init = function (db) {
   app.use('/', routes);
   app.use('/code', code);
   app.use('/cv', cv);
+  app.use('/bio', bio);
 
   return app;
 }

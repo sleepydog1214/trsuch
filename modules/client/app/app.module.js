@@ -39,6 +39,7 @@ angular.module('trsuchApp', [
   'core',
   'core.site',
   'index',
+  'bio',
   'cv',
   'sourceList',
   'sourceCode'
