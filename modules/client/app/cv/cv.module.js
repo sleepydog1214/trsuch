@@ -30,4 +30,4 @@
 *********************************************************************/
 'use strict';
 
-angular.module('cv', ['core.cv']);
+angular.module('cv', ['ngSanitize', 'core.cv']);

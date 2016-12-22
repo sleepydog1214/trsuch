@@ -31,3 +31,11 @@ a {
   background-color: #E8EAF6;
   width: 80%;
 }
+
+.layout-padding {
+  padding-left: 1em;
+}
+
+.trsuchText {
+  text-align: justify;
+}
