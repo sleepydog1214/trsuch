@@ -50,6 +50,9 @@ angular.
         $mdIconProvider.defaultIconSet('../svg/app.svg', 128);
         $mdIconProvider.icon('title', '../svg/title.svg', 128);
         $mdIconProvider.icon('menu', '../svg/ic_menu_black_24px.svg');
+        $mdIconProvider.icon('bullet-1', '../svg/bullet-1.svg');
+        $mdIconProvider.icon('bullet-2', '../svg/bullet-2.svg');
+        $mdIconProvider.icon('bullet-3', '../svg/bullet-3.svg');
 
         // Set the theme
         $mdThemingProvider.theme('default')

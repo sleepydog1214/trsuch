@@ -56,7 +56,7 @@ angular.
         //GET - Call the Sources service with a specific program id. Set a
         //      default for that program's execution results.
         self.data = Sources.get({sourceId: $routeParams.sourceId}, function() {
-          self.codeResults = 'TBD';
+          self.codeResults = 'Not executed yet';
         });
       }
     ]

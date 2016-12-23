@@ -21,18 +21,41 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
 ****************************************************************** -->
-<p>Algorithm Name: <span>{{$ctrl.data.name}}</span></p>
-<p>Algorithm Type: <span>{{$ctrl.data.type}}</span></p>
-<p>Algorithm Description: <span>{{$ctrl.data.description}}</span></p>
-<h3>Code</h3>
-<p>{{$ctrl.data.location}}</p>
-<script src="{{$ctrl.data.location}}"></script>
+<div class="trsuchText" layout-padding>
+  <md-list>
+    <md-list-item>
+      <p class="md-body-1">Algorithm Name:
+        <span class="md-body-2">{{$ctrl.data.name}}</span>
+      </p>
+    </md-list-item>
+    <md-list-item>
+      <p class="md-body-1">Algorithm Type:
+        <span class="md-body-2">{{$ctrl.data.type}}</span>
+      </p>
+    </md-list-item>
+    <md-list-item>
+      <p class="md-body-1">Algorithm Description:
+        <span class="md-body-2">{{$ctrl.data.description}}</span>
+      </p>
+    </md-list-item>
+  </md-list>
+  <script src="{{$ctrl.data.location}}"></script>
 
 <!-- *****************************************************************
  * Call the sourceCode controller's runCode() routine on a click to
  * execute the program's JS code.
 ****************************************************************** -->
-<h4 ng-click="$ctrl.runCode($ctrl.data.location)">Click here to execute algorithm</h4>
+  <md-button
+    class="md-raised"
+    ng-click="$ctrl.runCode($ctrl.data.location)">
+    Click here to execute algorithm
+  </md-button>
+  <div id="results">
+    <p><span>{{$ctrl.codeResults}}</span></p>
+  </div>
 
-<p><span>{{$ctrl.codeResults}}</span></p>
-<pre>{{$ctrl.data.code}}</pre>
+  <h3 class="md-title">Source Code</h3>
+  <md-content id="sourceCode">
+    <pre>{{$ctrl.data.code}}</pre>
+  </md-content>
+</div>

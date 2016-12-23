@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 #logo h1 {
   color: #000;
   text-shadow:
@@ -34,6 +38,23 @@ a {
 
 .layout-padding {
   padding-left: 1em;
+}
+
+.subP {
+  margin-top: 1em;
+}
+
+#sourceCode {
+  border: 0.15em solid black;
+  height: 250px;
+  overflow: scroll;
+}
+
+#results {
+  border: 0.15em solid black;
+  background-color: #E0E0E0;
+  margin-top: 1em;
+  overflow: scroll;
 }
 
 .trsuchText {

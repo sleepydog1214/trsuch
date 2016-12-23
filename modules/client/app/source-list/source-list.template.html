@@ -21,20 +21,30 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
 ****************************************************************** -->
-<p>Search: <input ng-model="$ctrl.query" /></p>
-<p>Sort by:
-  <select ng-model="$ctrl.orderProp">
-    <option value="name">Name</option>
-    <option value="location">Location</option>
-  </select>
-</p>
-<ul>
-<!-- *****************************************************************
- * Loop through source program that is retrieved by the sourceList
- * controller.
-****************************************************************** -->
-  <li ng-repeat="source in $ctrl.sources | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-    <span><a href="#!/sources/{{source._id}}">{{source.name}}</a></span>
-    <p>{{source.location}}</p>
-  </li>
-</ul>
+<div layout-padding layout="column">
+  <md-input-container>
+    <label>Search:</label>
+    <input ng-model="$ctrl.query" />
+  </md-input-container>
+  <md-input-container>
+  <label>Sort by:</label>
+    <md-select ng-model="$ctrl.orderProp">
+      <md-option ng-value="name">Name</md-option>
+      <md-option ng-value="type">Type</md-option>
+    </md-select>
+  </md-input-container>
+  <h2 class="md-title">Algorithms</h2>
+  <md-list>
+  <!-- *****************************************************************
+   * Loop through source program that is retrieved by the sourceList
+   * controller.
+  ****************************************************************** -->
+    <md-list-item ng-repeat="source in $ctrl.sources | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+      class="md-2-line">
+      <div class="md-list-item-text" layout="column">
+        <p>Name: <a ng-href="#!/sources/{{source._id}}">{{source.name}}</a></p>
+        <p>Type: {{source.type}}</p>
+      </div>
+    </md-list-item>
+  </md-list>
+</div>

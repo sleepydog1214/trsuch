@@ -22,20 +22,23 @@
  SOFTWARE.
 ****************************************************************** -->
 <div class="trsuchText" layout-padding>
-  <h1 class="md-display-1">{{$ctrl.cv[0].name}}</h1>
-  <h2 class="md-headline">{{$ctrl.cv[0].title}}</h2>
   <h3 class="md-title">Summary</h3>
   <p class="md-body-2">{{$ctrl.cv[0].summary}}</p>
   <h3 class="md-title">Experience</h3>
   <div layout-padding>
     <ul>
       <li ng-repeat="skill in $ctrl.cv[0].experience">
-        <p class="md-body-1">{{skill.paragraph}}</p>
+        <p class="md-body-1">
+          <md-icon md-svg-icon="bullet-1"></md-icon>
+          {{skill.paragraph}}
+        </p>
         <ul>
-        <li ng-repeat="subp in skill.subParagraph">
-          <div ng-bind-html="subp.bullet | linky:'_blank'">
-            <p class="md-body-2">{{subp.bullet}}</p>
-          </div>
+          <li ng-repeat="subp in skill.subParagraph" class="subP" layout="row">
+           <span><md-icon md-svg-icon="bullet-3"></md-icon></span>
+            <div ng-bind-html="subp.bullet | linky:'_blank'">
+              <span class="md-body-2">{{subp.bullet}}</span>
+            </div>
+          </li>
         </ul>
       </li>
     </ul>
@@ -44,26 +47,38 @@
       <li class="md-subhead">Languages/Programming</li>
         <ul>
           <li ng-repeat="lang in $ctrl.cv[0].technicalSkills.languages">
-            <p class="md-body-1">{{lang}}</p>
+            <p class="md-body-1">
+              <md-icon md-svg-icon="bullet-2"></md-icon>
+              {{lang}}
+            </p>
           </li>
         </ul>
       <li class="md-subhead">Software</li>
         <ul>
           <li ng-repeat="softw in $ctrl.cv[0].technicalSkills.software">
-            <p class="md-body-1">{{softw}}</p>
+            <p class="md-body-1">
+              <md-icon md-svg-icon="bullet-2"></md-icon>
+              {{softw}}
+            </p>
           </li>
         </ul>
       <li class="md-subhead">Standards</li>
         <ul>
           <li ng-repeat="standard in $ctrl.cv[0].technicalSkills.standards">
-            <p class="md-body-1">{{standard}}</p>
+            <p class="md-body-1">
+              <md-icon md-svg-icon="bullet-2"></md-icon>
+              {{standard}}
+            </p>
           </li>
         </ul>
     </ul>
     <h3 class="md-title">Key Skills</h3>
     <ul>
       <li ng-repeat="skill in $ctrl.cv[0].keySkills">
-        <p class="md-body-1">{{skill}}</p>
+        <p class="md-body-1">
+          <md-icon md-svg-icon="bullet-2"></md-icon>
+          {{skill}}
+        </p>
       </li>
     </ul>
     <h3 class="md-title">Education</h3>
@@ -71,7 +86,10 @@
       <li>{{$ctrl.cv[0].educationLocation}}</md-list-item>
       <ul>
         <li ng-repeat="degree in $ctrl.cv[0].degrees">
-          <p class="md-body-1">{{degree}}</p>
+          <p class="md-body-1">
+            <md-icon md-svg-icon="bullet-2"></md-icon>
+            {{degree}}
+          </p>
         </li>
       </ul>
     </ul>
