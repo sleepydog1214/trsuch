@@ -1,11 +1,5 @@
 'use strict';
 
-var LEN = 25;
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 function bubbleSort(arr) {
   var sortedArr = arr.slice(0);
   var len = arr.length;
@@ -23,15 +17,14 @@ function bubbleSort(arr) {
   return sortedArr;
 }
 
-function sort() {
+function runProgram() {
   var arr = [];
+  var len = CodeUtils.getDataLen();
 
-  for (var i = 0; i < LEN; i++) {
-    arr[i] = getRandomInt(0, 100);
+  for (var i = 0; i < len; i++) {
+    arr[i] = CodeUtils.getRandomInt(0, 100);
   }
 
-  console.log(arr);
   var sortedArr = bubbleSort(arr);
-  console.log(sortedArr);
   return sortedArr;
 }

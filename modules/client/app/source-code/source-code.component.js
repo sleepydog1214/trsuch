@@ -47,9 +47,11 @@ angular.
         //            file's sort() routine to execute that code.
         self.runCode = function runCode (location) {
           requirejs([location], function() {
-            var arr = sort();
-            self.codeResults = arr;
-            $scope.$apply();
+            require(['../code/utils'], function() {
+              var arr = runProgram();
+              self.codeResults = arr;
+              $scope.$apply();
+            });
           });
         };
 
