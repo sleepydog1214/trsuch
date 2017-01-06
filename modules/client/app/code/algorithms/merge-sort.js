@@ -1,5 +1,6 @@
 'use strict';
 
+// merge() - merge two sorted arrays
 function merge(arr1, arr2) {
   var idx1 = 0;
   var idx2 = 0;
@@ -29,6 +30,8 @@ function merge(arr1, arr2) {
   return B;
 }
 
+// mergeSort() - Recursively sort each array slice and then merge the
+// sorted slices.
 function mergeSort(arr) {
   if (arr.length < 2) {
     return arr;
@@ -42,15 +45,19 @@ function mergeSort(arr) {
   return merge(left, right);
 }
 
+// runProgram() - Run the sorting algorithm
 function runProgram() {
   var arr = [];
+
+  // Get the array lenght
   var len = CodeUtils.getDataLen();
 
+  // Fill the array with random integers
   for (var i = 0; i < len; i++) {
     arr[i] = CodeUtils.getRandomInt(0, 100);
   }
 
-  var sortedArr = [];
-  sortedArr = mergeSort(arr);
+  // Call the merge sort routine
+  var sortedArr = mergeSort(arr);
   return sortedArr;
 }
