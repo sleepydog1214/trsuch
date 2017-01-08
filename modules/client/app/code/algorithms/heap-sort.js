@@ -57,6 +57,7 @@ function heapsort(arr) {
 // runProgram() - Run the sorting algorithm
 function runProgram() {
   var arr = [];
+  var resultString = [];
 
   // Get the length of the array
   var len = CodeUtils.getDataLen();
@@ -66,8 +67,11 @@ function runProgram() {
     arr[i] = CodeUtils.getRandomInt(0, 100);
   }
 
+  resultString[0] = 'unsorted array: ' + arr;
+
   // Call the sorting routine
   heapsort(arr);
 
-  return arr;
+  resultString[1] = 'sorted array: ' + arr;
+  return resultString;
 }

@@ -23,6 +23,7 @@ function insertionSort(arr) {
 // runProgram() - Run the sorting algorithm
 function runProgram() {
   var arr = [];
+  var resultString = [];
 
   // Get the array lenght
   var len = CodeUtils.getDataLen();
@@ -32,7 +33,11 @@ function runProgram() {
     arr[i] = CodeUtils.getRandomInt(0, 100);
   }
 
+  resultString[0] = 'unsorted array: ' + arr;
+
   // Call the inserion sort routine
   var sortedArr = insertionSort(arr);
-  return sortedArr;
+
+  resultString[1] = 'sorted array: ' + sortedArr;
+  return resultString;
 }

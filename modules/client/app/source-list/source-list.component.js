@@ -39,7 +39,7 @@ angular.
         //                         for list of source programs
         function SourceListController(Sources) {
           this.sources = Sources.query();
-          this.orderProp = 'name';
+          this.orderProp = 'type';
         }
       ]
     });

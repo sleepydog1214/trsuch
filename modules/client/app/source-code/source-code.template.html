@@ -50,8 +50,8 @@
     ng-click="$ctrl.runCode($ctrl.data.location)">
     Click here to execute algorithm
   </md-button>
-  <div id="results">
-    <p><span>{{$ctrl.codeResults}}</span></p>
+  <div id="results" ng-repeat="result in $ctrl.codeResults">
+    <p>{{result}}</p>
   </div>
 
   <h3 class="md-title">Source Code</h3>

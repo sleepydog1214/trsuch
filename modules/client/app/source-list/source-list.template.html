@@ -26,21 +26,19 @@
     <label>Search:</label>
     <input ng-model="$ctrl.query" />
   </md-input-container>
-  <md-input-container>
   <label>Sort by:</label>
-    <md-select ng-model="$ctrl.orderProp">
-      <md-option ng-value="name">Name</md-option>
-      <md-option ng-value="type">Type</md-option>
-    </md-select>
-  </md-input-container>
-  <h2 class="md-title">Algorithms</h2>
+  <md-select ng-model="$ctrl.orderProp" aria-label="order select">
+    <md-option value="name">Name</md-option>
+    <md-option value="type">Type</md-option>
+  </md-select>
+  <h2 class="md-title">Algorithms and Data Structures</h2>
   <md-list>
   <!-- *****************************************************************
    * Loop through source program that is retrieved by the sourceList
    * controller.
   ****************************************************************** -->
-    <md-list-item ng-repeat="source in $ctrl.sources | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-      class="md-2-line">
+    <md-list-item ng-repeat="source in $ctrl.sources | filter:$ctrl.query |
+      orderBy:$ctrl.orderProp" class="md-2-line">
       <div class="md-list-item-text" layout="column">
         <p>Name: <a ng-href="#!/sources/{{source._id}}">{{source.name}}</a></p>
         <p>Type: {{source.type}}</p>

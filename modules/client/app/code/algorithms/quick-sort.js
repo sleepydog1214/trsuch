@@ -48,6 +48,7 @@ function quicksort(arr, p, r) {
 // runProgram() - Run the sorting algorithm
 function runProgram() {
   var arr = [];
+  var resultString = [];
 
   // Get the length of the array
   var len = CodeUtils.getDataLen();
@@ -57,8 +58,11 @@ function runProgram() {
     arr[i] = CodeUtils.getRandomInt(0, 100);
   }
 
+  resultString[0] = 'unsorted array: ' + arr;
+
   // Call the sorting routine
   quicksort(arr, 0, arr.length - 1);
 
-  return arr;
+  resultString[1] = 'sorted array: ' + arr;
+  return resultString;
 }
