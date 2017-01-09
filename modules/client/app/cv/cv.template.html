@@ -88,7 +88,9 @@
         <li ng-repeat="degree in $ctrl.cv[0].degrees">
           <p class="md-body-1">
             <md-icon md-svg-icon="bullet-2"></md-icon>
-            {{degree}}
+            <span>{{degree.title}}</span>
+            <span><a href="{{degree.thesis}}" download>
+              {{degree.label}}</a></span>
           </p>
         </li>
       </ul>
