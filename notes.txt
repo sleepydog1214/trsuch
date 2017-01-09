@@ -26,6 +26,6 @@ Proof read.
 X Add bullet svgs.
 X Get linkedin and github icons.
 Add more code.
-Add master's thesis link.
-Add link to art heroku page.
-Clean up art heroku page.
+X Add master's thesis link.
+X Add link to art heroku page.
+X Clean up art heroku page.
