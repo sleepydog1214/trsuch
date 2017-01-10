@@ -65,7 +65,7 @@ function runProgram() {
   var b = aStack.pop();
   var c = aStack.pop();
 
-  resultString.push('pop 3 elemets from stack: ' + a + ', ' + b + ', ' + c);
+  resultString.push('pop 3 elements from stack: ' + a + ', ' + b + ', ' + c);
 
   return resultString;
 }

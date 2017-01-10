@@ -77,7 +77,7 @@ function runProgram() {
   var b = aQueue.dequeue();
   var c = aQueue.dequeue();
 
-  resultString.push('dequeue 3 elemets from queue: ' + a + ', ' + b + ', ' + c);
+  resultString.push('dequeue 3 elements from queue: ' + a + ', ' + b + ', ' + c);
 
   return resultString;
 }

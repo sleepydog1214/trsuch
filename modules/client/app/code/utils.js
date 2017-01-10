@@ -9,3 +9,7 @@ CodeUtils.getRandomInt = function (min, max) {
 CodeUtils.getDataLen = function () {
   return 20;
 };
+
+CodeUtils.getListLen = function () {
+  return 10;
+};
