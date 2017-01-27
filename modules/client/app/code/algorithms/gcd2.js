@@ -22,7 +22,7 @@ function runProgram() {
 
   var result = gcd(a, b);
 
-  resultString[1] = 'Euclid GCD of ' + a + ', ' + b +
+  resultString[0] = 'Euclid GCD of ' + a + ', ' + b +
                     ' = ' + result;
   return resultString;
 }
