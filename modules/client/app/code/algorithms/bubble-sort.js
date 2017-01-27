@@ -23,7 +23,7 @@ function runProgram() {
   var arr = [];
   var resultString = [];
 
-  // Get the array lenght
+  // Get the array length
   var len = CodeUtils.getDataLen();
 
   // Fill the array with random integers
