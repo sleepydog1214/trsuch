@@ -29,7 +29,7 @@ List.prototype.insert = function(x) {
 
   this.head.node = aNode;
   this.head.node.prev = null;
-}
+};
 
 // delete a node in the list
 List.prototype.delete = function(x) {
@@ -45,7 +45,7 @@ List.prototype.delete = function(x) {
   if (aNode.next !== null) {
     aNode.next.prev = aNode.prev;
   }
-}
+};
 
 // Find a node with key x in list
 List.prototype.search = function(x) {

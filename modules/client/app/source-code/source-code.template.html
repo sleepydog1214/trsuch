@@ -51,7 +51,9 @@
     Click here to execute code
   </md-button>
   <div id="results" ng-repeat="result in $ctrl.codeResults">
+    <div ng-bind-html="result">
     <p>{{result}}</p>
+    </div>
   </div>
 
   <h3 class="md-title">Source Code</h3>
